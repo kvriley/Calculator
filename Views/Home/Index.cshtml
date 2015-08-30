@@ -1,0 +1,16 @@
+﻿@model Calculator.Models.CalculatorModel
+@{
+    ViewBag.Title = "Calculator";
+}
+
+
+<div id="main-content">
+    @Html.Action("ShowCalculator","Calculator")
+</div>
+
+
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/Scripts/Calculator.js")
+    }
