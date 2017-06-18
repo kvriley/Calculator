@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Calculator project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kvriley/Calculator.git"
+  },
+  "author": "Kevin Riley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kvriley/Calculator/issues"
+  },
+  "homepage": "https://github.com/kvriley/Calculator#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1"
+  }
+}
