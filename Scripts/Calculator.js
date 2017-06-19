@@ -107,7 +107,9 @@ module.exports= function () {
     self.hideNewCommands = function (obj, event) {
      //   var elem = $(event.target);
      var className= event.target.className;
-       var showIt = className=='showNewCommands' && className!='closeButton';
+       var showIt = 
+        (className=='showNewCommands' || className.indexOf("optionalCommand") > 0)
+        && className!='closeButton';
        ; // (elem.hasClass("showNewCommands") || elem.parents(".newCommands").length > 0) && !elem.hasClass("closeButton");
         self.showingNewCommands(showIt);
     };

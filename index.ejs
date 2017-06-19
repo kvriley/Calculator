@@ -52,7 +52,7 @@
         <p>Select Commands</p>
         <div data-bind="foreach: optionalCommands" class="commands">
 
-            <button class="selectCommand" data-bind="visible: optional, value: command, text: command, css:{selected: selected}, click: $parent.selectCommand"></button>
+            <button class="selectCommand optionalCommand" data-bind="visible: optional, value: command, text: command, css:{selected: selected}, click: $parent.selectCommand"></button>
         </div>
 
         <a class="closeButton" href="#" data-bind="click: function() {showingNewCommands(false)}">Done</a>
