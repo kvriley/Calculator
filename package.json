@@ -4,7 +4,12 @@
   "description": "Calculator project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && \"npm run web\"",
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run webpack-once",
+    "web": "webpack-dev-server",
+    "webpack": "webpack --watch",
+    "webpack-once": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,17 @@
   "homepage": "https://github.com/kvriley/Calculator#readme",
   "devDependencies": {
     "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.6.1"
+  },
+  "devServer": {
+    "contentBase": "dist",
+    "historyApiFallback": true,
+    "port": 3000
+  },
+  "dependencies": {
+    "html-loader": "^0.4.5",
+    "i": "^0.3.5",
+    "rimraf": "^2.6.1",
     "webpack": "^2.6.1"
   }
 }

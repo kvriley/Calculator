@@ -1,3 +1,8 @@
+var path = require('path');
+
+// load the web server settings from package.json
+const { devServer } = require('./package.json');
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpackConfig = {
   entry: './index.js',
@@ -7,10 +12,20 @@ var webpackConfig = {
   },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css" }
+          { test: /\.css$/, loader: 'style-loader!css-loader'}
         ]
     },
-  plugins: [new HtmlWebpackPlugin()]
+    // use the webpack dev server to serve up the web application
+    devServer,    
+  plugins: [new HtmlWebpackPlugin({
+    template: path.join(__dirname, './index.ejs')
+    ,inject: false
+  })]
+,
+	externals: {
+		'ko': 'ko'
+  }
 };
+
 
 module.exports = webpackConfig;
