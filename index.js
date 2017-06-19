@@ -1,6 +1,7 @@
 require("./Content/Calculator.css");
 
-var calc = require("./Scripts/Calculator.js");
 
-import ko from 'ko';
-ko.applyBindings(new calc);
+// import ko from 'ko';
+
+var calc = require("./Scripts/Calculator.js");
+var calcObj = new calc();

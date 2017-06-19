@@ -1,5 +1,8 @@
+
 module.exports= function () {
-    // var CalculatorModel = function () {
+    var ko = require("./knockout-2.2.0.js");
+
+    var CalculatorModel = function () {
     var self = this;
 
     self.memoryCommands = ko.observableArray([
@@ -191,4 +194,9 @@ module.exports= function () {
         return self.inputLine() == '';
     }, self);
 };
+    
+    ko.applyBindings(new CalculatorModel);
+
+};
+
 
